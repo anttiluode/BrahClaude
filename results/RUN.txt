@@ -1,0 +1,99 @@
+{
+ "distinguishability": {
+  "256": {
+   "distinct_4tap": 55,
+   "distinct_sum": 38
+  },
+  "1024": {
+   "distinct_4tap": 28,
+   "distinct_sum": 20
+  },
+  "2048": {
+   "distinct_4tap": 19,
+   "distinct_sum": 17
+  }
+ },
+ "rhythm": {
+  "sequential/256/w50": {
+   "period": 52,
+   "autocorr": 0.957,
+   "square_sizes_visited": 8
+  },
+  "sequential/256/w30": {
+   "period": 32,
+   "autocorr": 0.973,
+   "square_sizes_visited": 8
+  },
+  "sequential/1024/w50": {
+   "period": 2,
+   "autocorr": 0.998,
+   "square_sizes_visited": 2
+  },
+  "sequential/1024/w30": {
+   "period": 2,
+   "autocorr": 0.998,
+   "square_sizes_visited": 2
+  },
+  "sequential/2048/w50": {
+   "period": 51,
+   "autocorr": 0.958,
+   "square_sizes_visited": 3
+  },
+  "sequential/2048/w30": {
+   "period": 62,
+   "autocorr": 0.949,
+   "square_sizes_visited": 7
+  },
+  "synchronous/256/w50": {
+   "period": 55,
+   "autocorr": 0.955,
+   "square_sizes_visited": 10
+  },
+  "synchronous/256/w30": {
+   "period": 34,
+   "autocorr": 0.971,
+   "square_sizes_visited": 9
+  },
+  "synchronous/1024/w50": {
+   "period": 4,
+   "autocorr": 0.997,
+   "square_sizes_visited": 2
+  },
+  "synchronous/1024/w30": {
+   "period": 4,
+   "autocorr": 0.997,
+   "square_sizes_visited": 2
+  },
+  "synchronous/2048/w50": {
+   "period": 52,
+   "autocorr": 0.957,
+   "square_sizes_visited": 5
+  },
+  "synchronous/2048/w30": {
+   "period": 32,
+   "autocorr": 0.973,
+   "square_sizes_visited": 5
+  }
+ }
+}
+checkerboard coupler  err_late 0.231±0.000 cov   9.0 H 2.09b homeo 0.009 drift 0.000 spread 1.451->1.451 r(use,dgain) None
+checkerboard random   err_late 0.000±0.000 cov  32.0 H 4.99b homeo 0.718 drift 0.000 spread 1.451->1.451 r(use,dgain) None
+checkerboard sweep    err_late 0.000±0.000 cov  32.0 H 5.00b homeo 0.739 drift 0.000 spread 1.451->1.451 r(use,dgain) None
+checkerboard curious  err_late 0.000±0.000 cov  32.0 H 5.00b homeo 0.764 drift 0.000 spread 1.451->1.451 r(use,dgain) None
+checkerboard dual     err_late 0.000±0.000 cov  32.0 H 4.45b homeo 0.070 drift 0.000 spread 1.451->1.451 r(use,dgain) None
+static-net   coupler  err_late 0.205±0.072 cov   9.3 H 1.17b homeo 0.203 drift 0.000 spread 1.220->1.220 r(use,dgain) None
+static-net   random   err_late 0.072±0.023 cov  32.0 H 4.99b homeo 0.284 drift 0.000 spread 1.220->1.220 r(use,dgain) None
+static-net   sweep    err_late 0.092±0.030 cov  32.0 H 5.00b homeo 0.272 drift 0.000 spread 1.220->1.220 r(use,dgain) None
+static-net   curious  err_late 0.066±0.025 cov  32.0 H 4.73b homeo 0.262 drift 0.000 spread 1.220->1.220 r(use,dgain) None
+static-net   dual     err_late 0.068±0.026 cov  32.0 H 4.62b homeo 0.132 drift 0.000 spread 1.220->1.220 r(use,dgain) None
+habituating  coupler  err_late 0.198±0.058 cov  13.9 H 2.09b homeo 0.319 drift 0.000 spread 1.220->1.220 r(use,dgain) None
+habituating  random   err_late 0.059±0.015 cov  32.0 H 4.99b homeo 0.270 drift 0.000 spread 1.220->1.220 r(use,dgain) None
+habituating  sweep    err_late 0.080±0.022 cov  32.0 H 5.00b homeo 0.275 drift 0.000 spread 1.220->1.220 r(use,dgain) None
+habituating  curious  err_late 0.054±0.016 cov  32.0 H 4.72b homeo 0.231 drift 0.000 spread 1.220->1.220 r(use,dgain) None
+habituating  dual     err_late 0.054±0.016 cov  32.0 H 4.62b homeo 0.129 drift 0.000 spread 1.220->1.220 r(use,dgain) None
+plastic      coupler  err_late 0.190±0.071 cov  19.9 H 2.56b homeo 0.330 drift 0.558 spread 1.220->1.176 r(use,dgain) 0.176
+plastic      random   err_late 0.051±0.011 cov  32.0 H 4.99b homeo 0.310 drift 0.458 spread 1.220->1.153 r(use,dgain) -0.099
+plastic      sweep    err_late 0.073±0.018 cov  32.0 H 5.00b homeo 0.294 drift 0.462 spread 1.220->1.173 r(use,dgain) -0.076
+plastic      curious  err_late 0.046±0.007 cov  32.0 H 4.84b homeo 0.303 drift 0.460 spread 1.220->1.088 r(use,dgain) 0.297
+plastic      dual     err_late 0.049±0.013 cov  32.0 H 4.76b homeo 0.140 drift 0.463 spread 1.220->1.096 r(use,dgain) 0.301
+runtime 202.5 s
