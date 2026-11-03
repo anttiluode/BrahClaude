@@ -10,7 +10,7 @@ routes*, not just on the neurons.
 
 This repo builds the smallest version of that and tests it with gates that were
 pre-registered before any run ([PREREGISTRATION.md](PREREGISTRATION.md), commit
-`1bcba05`). Plain numpy, CPU, ~25 s: `python run_all.py`, tests: `pytest tests`.
+`1bcba05`). Plain numpy, CPU, ~35 s: `python run_all.py` (G0–G5 and the D1/D2 diagnostics). G6 takes about 35 min: `python experiments/g6_one_soma.py`. Tests: `pytest tests`.
 
 ## The edge
 
@@ -61,6 +61,10 @@ timescales (facilitation, depression, augmentation, post-tetanic potentiation).
 | G5-2 | TM route: dense reads destroy the memory (cost ≥ 0.30) | **PASS** — cost 0.866 at period 2 |
 | G5-3 | TM: read cost shrinks with spacing | **PASS** — 0.866 → 0.302 |
 | G5-4 | TM: selective re-firing preserves it | **PASS** — 1.000 / 0.967 / 0.976 vs 0.989 / 0.945 / 0.432 unread |
+| G6-0 | one soma, broadcast pings: zero information (exact) | **PASS** — posterior = prior to 7.6e-17 |
+| G6-1 | linear route: choosing which routes to ping recovers the pair through one soma | **PASS** — 0.992 by query 6, 1.000 by 12 (random subsets 0.887 at 6) |
+| G6-2 | TM: destructive reads cap what one soma can learn | **PASS** — 0.553 vs 1.000 linear |
+| G6-3 | the questioning costs TM memory, not linear | **PASS** — TM 0.832 → 0.043; linear 0.684 → 0.687 |
 
 ### G1 — probing a route (fail, narrowly)
 
@@ -154,6 +158,40 @@ Disclosed:
 - An informal pilot with other settings was run in chat before the pre-registration (its numbers are in PREREGISTRATION.md).
 - The first G5 run had a scoring bug: arm 0 was decoded at read index 0, where that arm has no pulse, giving chance. The pre-registration says t_11. It was fixed and rerun; no model or criterion changed.
 
+### G6 — addresses through one soma, when every look costs memory (pre-registered, commit `83a50a4`)
+
+Sol (BrahSol) spotted that G2a's 99.6% needs **eight separately recorded routes**.
+Summed into one soma, the way the original coupler summed its four taps, every item
+gives the same total, so the memory is invisible. G6 makes that the task. There are 8
+routes, and the hidden state is which of all **28** route pairs was written. The prober
+pings a **subset** of routes and sees **one summed number**. It decodes with exact
+Bayes, given the dynamics and its own history (both are gifts, and stated as such).
+1000 episodes per cell, 12 queries.
+
+| P = 10 | broadcast | random half | greedy info-gain | 8 separate channels | memory left after (unqueried) |
+|---|---|---|---|---|---|
+| linear, query 6 / 12 | .031 / .031 | .887 / .996 | **.992 / 1.000** | 1.000 / 1.000 | .687 (.684) |
+| TM, query 6 / 12 | .039 / .039 | .474 / .544 | **.532 / .553** | .978 / .978 | **.043** (.832) |
+
+| P = 40 | broadcast | random half | greedy | 8 channels | memory left (unqueried) |
+|---|---|---|---|---|---|
+| linear, query 12 | .036 | .866 | **.949** | 1.000 | .103 (.102) |
+| TM, query 12 | .032 | .649 | **.808** | .992 | .060 (.177) |
+
+Chance is 1/28 = .036.
+
+1. **One soma plus broadcast pings is blind, exactly.** The posterior never moves from the prior (7.6e-17).
+2. **An address can be a sequence of interventions.** On the linear route, choosing *which* routes to ping recovers the written pair through one summed readout. Greedy info-gain gets there by query 6 with about 3.8 routes per query, and the questioning costs nothing.
+3. **On a realistic synapse the address costs the content.** Each subset ping erases what it asks about, so one soma tops out at .55 (P = 10). Eight separate channels get .97 in a single look. Spacing helps (.81 at P = 40) because routes recover between looks. Any questioning wipes the TM memory for a later reader (.832 → .03–.05), including the 8-channel look.
+4. **Greedy info-gain is damage-blind.** At P = 10 on TM it barely beats random subsets (.553 vs .544). It maximises the information in the *next* answer, not what is left for later. A damage-aware controller is the open problem, and it is exactly Sol's "learned conservation" test in BrahSol.
+
+Consequence for the neuron picture: if synapses are destructive like this, a single-compartment reader is badly placed. Separate readout compartments (dendritic branches as partly independent units, the biology Sol cited) do in one look what one soma cannot finish at all. That is a model result, not a biological claim.
+
+### Post-hoc diagnostics D1, D2 (requested by Sol; declared in PREREGISTRATION.md, not pre-registered)
+
+- **D1, G2b with a matched raw-trace baseline:** octave-band terminals .857, four terminals each reading one raw trace (scaled to the same size) .760, homogeneous .408. The bands carry no new information (they are an invertible transform of the traces). But band-pass terminals, each reading a *difference* of traces, are a better default projection than low-pass single traces. That is the accurate version of "Sihti helps".
+- **D2, is G5's erasure real or only in the readout?** On the TM route, the written-minus-unwritten facilitation gap Δu just before the 12th read is .019 after 11 neutral reads, against .218 unread (P = 2). At P = 10 it is .014 vs .163, and at P = 40 .005 vs .054. The memory is gone from the synapse state itself.
+
 ## Prior art (none of the mechanisms here is new)
 
 - Short-term plasticity as edge state: Tsodyks & Markram 1997; Abbott et al. 1997.
@@ -162,6 +200,8 @@ Disclosed:
 - Pinging to read hidden state: Wolff, Jochim, Akyürek & Stokes 2017.
 - Burst multiplexing read by facilitating vs depressing synapses: Naud & Sprekeler 2018.
 - Bank of exponentials as a history code: Shankar & Howard 2012 (Laplace-transform time cells).
+- Choosing subset queries through one summed readout is group testing (Dorfman 1943) with noisy, *destructive* tests; the greedy info-gain policy is Bayesian experimental design (Lindley 1956).
+- Dendritic branches as partly independent computational compartments: Poirazi, Brannon & Mel 2003; London & Häusser 2005.
 
 What this repo adds is small and specific: the route history written as an exact Sihti
 residue stack (octave age bins), and the measurement that octave-tuned terminals let
