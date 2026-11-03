@@ -1,0 +1,15 @@
+{
+  "G0a_telescoping_max_err": 3.552713678800501e-15,
+  "G0b_volterra_max_err": 5.329070518200751e-15,
+  "G0c_first_pulse": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "pass": {
+    "G0a": true,
+    "G0b": true,
+    "G0c": true
+  }
+}

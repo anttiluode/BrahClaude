@@ -1,0 +1,193 @@
+{
+  "FAC_W32": {
+    "learned": {
+      "on_A": [
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "on_B": [],
+      "frac_A": 1.0,
+      "mean_lead": 3.5
+    },
+    "learned_reward": 0.5388649395641857,
+    "greedy": {
+      "on_A": [
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "on_B": [],
+      "frac_A": 1.0,
+      "mean_lead": 3.5
+    },
+    "greedy_reward": 0.5388649395641856,
+    "kappa_peak_lag": 1
+  },
+  "DEP_W32": {
+    "learned": {
+      "on_A": [],
+      "on_B": [
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "frac_A": 0.0,
+      "mean_lead": 3.5
+    },
+    "learned_reward": 0.4082111514493756,
+    "greedy": {
+      "on_A": [],
+      "on_B": [
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "frac_A": 0.0,
+      "mean_lead": 3.5
+    },
+    "greedy_reward": 0.4082111514493756,
+    "kappa_peak_lag": 600
+  },
+  "BAND_W4": {
+    "learned": {
+      "on_A": [
+        185,
+        186,
+        187,
+        188,
+        189,
+        190
+      ],
+      "on_B": [],
+      "frac_A": 1.0,
+      "mean_lead": 12.5
+    },
+    "learned_reward": 1.359085478608238,
+    "greedy": {
+      "on_A": [
+        186,
+        187,
+        188,
+        189,
+        190,
+        191
+      ],
+      "on_B": [],
+      "frac_A": 1.0,
+      "mean_lead": 11.5
+    },
+    "greedy_reward": 1.3598808352274756,
+    "kappa_peak_lag": 13
+  },
+  "BAND_W32": {
+    "learned": {
+      "on_A": [
+        191,
+        192,
+        193,
+        194,
+        195,
+        196
+      ],
+      "on_B": [],
+      "frac_A": 1.0,
+      "mean_lead": 6.5
+    },
+    "learned_reward": 1.069383101584063,
+    "greedy": {
+      "on_A": [
+        191,
+        192,
+        193,
+        194,
+        195,
+        196
+      ],
+      "on_B": [],
+      "frac_A": 1.0,
+      "mean_lead": 6.5
+    },
+    "greedy_reward": 1.0693831015840627,
+    "kappa_peak_lag": 13
+  },
+  "BAND_W128": {
+    "learned": {
+      "on_A": [
+        193,
+        194,
+        195,
+        196,
+        197,
+        198
+      ],
+      "on_B": [],
+      "frac_A": 1.0,
+      "mean_lead": 4.5
+    },
+    "learned_reward": 0.4209699173398874,
+    "greedy": {
+      "on_A": [
+        193,
+        194,
+        195,
+        196,
+        197,
+        198
+      ],
+      "on_B": [],
+      "frac_A": 1.0,
+      "mean_lead": 4.5
+    },
+    "greedy_reward": 0.4209699173398874,
+    "kappa_peak_lag": 13
+  },
+  "AUG_W32": {
+    "learned": {
+      "on_A": [
+        159,
+        161,
+        162,
+        163,
+        164,
+        165
+      ],
+      "on_B": [],
+      "frac_A": 1.0,
+      "mean_lead": 37.666666666666664
+    },
+    "learned_reward": 1.2024625331530394,
+    "greedy": {
+      "on_A": [
+        159,
+        160,
+        161,
+        162,
+        163,
+        164
+      ],
+      "on_B": [],
+      "frac_A": 1.0,
+      "mean_lead": 38.5
+    },
+    "greedy_reward": 1.2027319483104388,
+    "kappa_peak_lag": 52
+  },
+  "pass": {
+    "G3a": true,
+    "G3b": true,
+    "G3c": true
+  }
+}
