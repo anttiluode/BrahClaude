@@ -23,14 +23,15 @@ U_DEF, TAU_F_DEF, TAU_D_DEF = 0.2, 300.0, 40.0
 
 
 def run(x: np.ndarray, U: float = U_DEF, tau_f: float = TAU_F_DEF,
-        tau_d: float = TAU_D_DEF):
-    """x: (T, E) 0/1 spikes. Returns y (T, E) normalised releases and final (u, R)."""
+        tau_d: float = TAU_D_DEF, u0=None, R0=None):
+    """x: (T, E) 0/1 spikes. Returns y (T, E) normalised releases and final (u, R).
+    u0, R0 (optional, shape (E,)) continue from a saved state."""
     x = np.asarray(x, float)
     T, E = x.shape
     df, dd = np.exp(-1.0 / tau_f), np.exp(-1.0 / tau_d)
     y0 = 2 * U - U * U
-    u = np.full(E, U)
-    R = np.ones(E)
+    u = np.full(E, U) if u0 is None else np.array(u0, float)
+    R = np.ones(E) if R0 is None else np.array(R0, float)
     y = np.zeros((T, E))
     for t in range(T):
         s = x[t]
