@@ -8,6 +8,6 @@ EXP = os.path.join(HERE, "experiments")
 sys.path.insert(0, EXP)
 os.chdir(EXP)
 for name in ["g0_identities", "g1_identify", "g2_silent_memory", "g3_write_for_later",
-             "g4_multiplex", "figures"]:
+             "g4_multiplex", "g5_read_wipe", "diagnostics_d1_d2", "figures"]:
     print(f"\n=== {name} ===")
     runpy.run_path(os.path.join(EXP, name + ".py"), run_name="__main__")

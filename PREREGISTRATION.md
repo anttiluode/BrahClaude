@@ -62,3 +62,100 @@ low-passed (tau=500). Decoded a_hat = D readout, b_hat = F/D readout.
   and with flat targets (g=0) b_hat carries no information (|corr| <= 0.1 or constant).
 
 Every gate is reported as pre-registered, pass or fail.
+
+---
+
+# G5 — is a ping read destructive? (pre-registered 3 Nov 2026, before any G5 run)
+
+**Why.** In `brah/edges.py` a neutral ping writes the same pulse on every route, so
+before the clip it shifts every route's response equally and the differences that
+hold the memory are untouched: reading is free. Real short-term plasticity is
+multiplicative and saturating (Tsodyks–Markram), so reading may erase what it reads.
+This also ties to `pinger/` Gate 4B, where probing a plastic medium changed it.
+
+**Disclosed pilot.** An informal run in the chat used different settings: U = 0.05,
+τ_F = 300, τ_D = 20 steps, output normalised by U, σ = 0.1 for both models, and arm N
+only. Over 12 reads at period 2 it gave LIN accuracy 0.996 → 0.989 and TM 1.00 → 0.29.
+The predictions below are informed by it. Changed since the pilot: U, τ_D, the
+normalisation, the σ rule, and two new arms (0 and S).
+
+**Routes.** LIN = 8 AUG edges from `brah/edges.py`, exactly as G2a. TM = `brah/tm.py`
+with U = 0.2, τ_F = 300, τ_D = 40 steps (Mongillo et al. 2008 proportions at 5 ms per
+step). Its output is normalised so a fresh synapse answers 1. The only model property
+checked before this file: a fresh TM route answers exactly 1, and a 3-spike burst at
+ISI 2 releases 1, 0.89, 0.60.
+
+**Task.** The G2a items (the same seed-2 draw: 8 items, each a 3-spike burst at
+t = 0, 2, 4 on 2 of the 8 routes). Reads happen at t_i = 155 + P·i, i = 0..11,
+P ∈ {2, 10, 40}.
+
+**Arms.**
+- **N (neutral reads):** every read is a pulse on all 8 routes, and each read is decoded on its own.
+- **0 (time-matched, no prior reads):** one neutral read at t_11 only.
+- **S (selective refresh, oracle):** reads 0–10 pulse only the item's written routes (the reader knows the item, i.e. it has an efference copy). Read 11 is neutral and is the one decoded.
+
+**Decoding.** Bayes nearest template, with templates per arm and per read index (the
+reader is given the dynamics, and that gift is stated). Isotropic Gaussian noise, with
+σ per route model = 0.25 × the mean written-minus-unwritten response at read 0 of arm
+N. 20 000 Monte Carlo trials, rng seed 5.
+**Read cost** := acc(arm 0, t_11) − acc(arm N, read 11).
+
+**Criteria.**
+- G5-0a identity: for LIN, written-minus-unwritten differences at every read of arm N equal those of a lone read at the same time. Max abs error < 1e-9 (a common-mode write).
+- G5-0b identity: a fresh TM route's first pulse returns exactly 1.
+- G5-1 LIN reads are free: read cost ≤ 0.02 at every P.
+- G5-2 TM dense reads are destructive: read cost ≥ 0.30 at P = 2.
+- G5-3 TM read cost shrinks with spacing: cost(P = 40) < cost(P = 2).
+- G5-4 TM selective refresh preserves the memory: acc(S, read 11) ≥ acc(0, t_11) at every P.
+
+Every criterion is reported as pre-registered, pass or fail.
+
+---
+
+# G6 — addresses through one soma, when every look costs memory (pre-registered 3 Nov 2026, before any G6 run)
+
+**Why.** Sol (BrahSol, 3 Nov) pointed out that G2a's 99.6% needs eight separately
+recorded route outputs. Summed into one soma, which is what the original coupler did
+with its four taps, every item gives the same total, because every item has exactly two
+written routes. Sol also showed that three route subsets separate G2a's eight items
+when there is no noise. G6 asks the general version: through **one summed readout**, can a
+prober find which routes were written by choosing **which routes to ping** (an address
+as a sequence of interventions)? And what does that questioning cost the memory, on a
+linear route (`brah/edges.py`, AUG) versus a Tsodyks–Markram route (`brah/tm.py`, as in G5)?
+
+**World.** 8 routes. The hidden state is one of all **28** route pairs (uniform prior;
+not the 8 G2a items, so the design cannot be tuned to them). It is written by a 3-spike
+burst at t = 0, 2, 4 on both routes of the pair. Queries happen at t_q = 155 + P·q,
+q = 0..11, with P ∈ {10, 40}.
+
+**Query.** The prober picks a nonempty route subset S and pulses those routes. It
+observes one number, z = Σ_{e∈S} y_e + ε, with ε ~ N(0, σ²) and the same σ whatever
+the size of S (one soma, one noise source). σ per model = 0.25 × the single-route
+written-minus-unwritten response at t = 155 on a fresh written route (the G5 rule).
+
+**Belief.** Exact Bayes over the 28 hypotheses. The prober is given the route dynamics
+and its own query history (an efference copy); this gift is stated.
+
+**Policies.**
+- **B** broadcast: S = all 8.
+- **R** random: S is a uniform random subset of size 4.
+- **G** greedy: S among all 255 nonempty subsets, maximising the mutual information between the hypothesis and z, estimated by Monte Carlo with 400 samples per subset.
+- **O** reference: 8 separate channels with broadcast pings (not one soma).
+
+1000 episodes per model × policy × P, rng seed 6.
+
+**Memory left.** After the 12th query, wait P steps, then make one 8-channel broadcast
+diagnostic read with the same σ. Its Bayes accuracy over the 28 pairs is computed with
+the true per-hypothesis templates. The unqueried baseline is the same diagnostic read
+at the same time with no prior queries.
+
+**Criteria.**
+- **G6-0 (exact):** under B the posterior stays equal to the prior after every query, for both models. Max abs deviation < 1e-9.
+- **G6-1:** LIN, P = 10: G reaches MAP accuracy ≥ 0.90 by query 12, and G ≥ R + 0.10 at query 6.
+- **G6-2:** TM, P = 10: G's accuracy at query 12 is lower than LIN's G at query 12 (destructive reads limit what one soma can learn).
+- **G6-3:** P = 10: the questioning costs the TM memory, with diagnostic accuracy after G's 12 queries ≥ 0.20 below the unqueried baseline. For LIN it costs nothing, with |difference| ≤ 0.02.
+- **Descriptive only (no criterion):** subset sizes G chooses, and how often it re-pings a route it pinged in the previous query, LIN vs TM.
+
+## Post-hoc diagnostics (requested by Sol after G2b/G5 were run; not pre-registered, reported as such)
+- **D1 (G2b matched raw-trace baseline):** 4 terminals that each read one raw trace m_k (k = 3, 4, 5, 6) instead of band pairs, scaled to the same mean response size as the hetero terminals, with the same σ and decoder.
+- **D2 (G5 hidden state):** for the TM route, the written-minus-unwritten distance in hidden state (u, R) at t_11, arm N vs arm 0. This tests whether erasure is in the state itself, not only in the readout.

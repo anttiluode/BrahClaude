@@ -1,0 +1,39 @@
+{
+ "n_pairs": 60,
+ "ticks": 2000,
+ "result": {
+  "static-net": {
+   "coverage_mean": 8.2,
+   "coverage_median": 4.0,
+   "frac_seeds_locked_<=4_pings": 0.533,
+   "err_late_mean": 0.2152,
+   "homeo_mean": 0.1369,
+   "paired_cov_diff_vs_static": 0.0,
+   "paired_diff_se": 0.0,
+   "seeds_more_coverage_than_static": 0,
+   "seeds_less_coverage_than_static": 0
+  },
+  "habituating": {
+   "coverage_mean": 16.32,
+   "coverage_median": 19.0,
+   "frac_seeds_locked_<=4_pings": 0.133,
+   "err_late_mean": 0.1757,
+   "homeo_mean": 0.23,
+   "paired_cov_diff_vs_static": 8.12,
+   "paired_diff_se": 1.27,
+   "seeds_more_coverage_than_static": 41,
+   "seeds_less_coverage_than_static": 11
+  },
+  "plastic": {
+   "coverage_mean": 22.57,
+   "coverage_median": 22.0,
+   "frac_seeds_locked_<=4_pings": 0.017,
+   "err_late_mean": 0.1745,
+   "homeo_mean": 0.2801,
+   "paired_cov_diff_vs_static": 14.37,
+   "paired_diff_se": 1.11,
+   "seeds_more_coverage_than_static": 54,
+   "seeds_less_coverage_than_static": 4
+  }
+ }
+}

@@ -1,0 +1,853 @@
+{
+ "seeds": 10,
+ "ticks": 2000,
+ "gate0": {
+  "distinguishability": {
+   "256": {
+    "distinct_4tap": 55,
+    "distinct_sum": 38
+   },
+   "1024": {
+    "distinct_4tap": 28,
+    "distinct_sum": 20
+   },
+   "2048": {
+    "distinct_4tap": 19,
+    "distinct_sum": 17
+   }
+  },
+  "rhythm": {
+   "sequential/256/w50": {
+    "period": 52,
+    "autocorr": 0.957,
+    "square_sizes_visited": 8
+   },
+   "sequential/256/w30": {
+    "period": 32,
+    "autocorr": 0.973,
+    "square_sizes_visited": 8
+   },
+   "sequential/1024/w50": {
+    "period": 2,
+    "autocorr": 0.998,
+    "square_sizes_visited": 2
+   },
+   "sequential/1024/w30": {
+    "period": 2,
+    "autocorr": 0.998,
+    "square_sizes_visited": 2
+   },
+   "sequential/2048/w50": {
+    "period": 51,
+    "autocorr": 0.958,
+    "square_sizes_visited": 3
+   },
+   "sequential/2048/w30": {
+    "period": 62,
+    "autocorr": 0.949,
+    "square_sizes_visited": 7
+   },
+   "synchronous/256/w50": {
+    "period": 55,
+    "autocorr": 0.955,
+    "square_sizes_visited": 10
+   },
+   "synchronous/256/w30": {
+    "period": 34,
+    "autocorr": 0.971,
+    "square_sizes_visited": 9
+   },
+   "synchronous/1024/w50": {
+    "period": 4,
+    "autocorr": 0.997,
+    "square_sizes_visited": 2
+   },
+   "synchronous/1024/w30": {
+    "period": 4,
+    "autocorr": 0.997,
+    "square_sizes_visited": 2
+   },
+   "synchronous/2048/w50": {
+    "period": 52,
+    "autocorr": 0.957,
+    "square_sizes_visited": 5
+   },
+   "synchronous/2048/w30": {
+    "period": 32,
+    "autocorr": 0.973,
+    "square_sizes_visited": 5
+   }
+  }
+ },
+ "gates123": {
+  "checkerboard": {
+   "coupler": {
+    "err_final": [
+     0.2305,
+     0.0
+    ],
+    "err_late": [
+     0.2305,
+     0.0
+    ],
+    "coverage": [
+     9.0,
+     0.0
+    ],
+    "entropy_bits": [
+     2.0881,
+     0.0
+    ],
+    "homeo": [
+     0.0087,
+     0.0
+    ],
+    "drift": [
+     0.0,
+     0.0
+    ],
+    "spread0": [
+     1.4509,
+     0.0
+    ],
+    "spread1": [
+     1.4509,
+     0.0
+    ],
+    "usage_vs_gain_change_r": [
+     null,
+     0
+    ]
+   },
+   "random": {
+    "err_final": [
+     0.0,
+     0.0
+    ],
+    "err_late": [
+     0.0,
+     0.0
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     4.988,
+     0.0021
+    ],
+    "homeo": [
+     0.7176,
+     0.0266
+    ],
+    "drift": [
+     0.0,
+     0.0
+    ],
+    "spread0": [
+     1.4509,
+     0.0
+    ],
+    "spread1": [
+     1.4509,
+     0.0
+    ],
+    "usage_vs_gain_change_r": [
+     null,
+     0
+    ]
+   },
+   "sweep": {
+    "err_final": [
+     0.0,
+     0.0
+    ],
+    "err_late": [
+     0.0,
+     0.0
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     5.0,
+     0.0
+    ],
+    "homeo": [
+     0.7388,
+     0.0
+    ],
+    "drift": [
+     0.0,
+     0.0
+    ],
+    "spread0": [
+     1.4509,
+     0.0
+    ],
+    "spread1": [
+     1.4509,
+     0.0
+    ],
+    "usage_vs_gain_change_r": [
+     null,
+     0
+    ]
+   },
+   "curious": {
+    "err_final": [
+     0.0,
+     0.0
+    ],
+    "err_late": [
+     0.0,
+     0.0
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     4.9993,
+     0.0003
+    ],
+    "homeo": [
+     0.7636,
+     0.0035
+    ],
+    "drift": [
+     0.0,
+     0.0
+    ],
+    "spread0": [
+     1.4509,
+     0.0
+    ],
+    "spread1": [
+     1.4509,
+     0.0
+    ],
+    "usage_vs_gain_change_r": [
+     null,
+     0
+    ]
+   },
+   "dual": {
+    "err_final": [
+     0.0,
+     0.0
+    ],
+    "err_late": [
+     0.0,
+     0.0
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     4.4533,
+     0.0656
+    ],
+    "homeo": [
+     0.0695,
+     0.0065
+    ],
+    "drift": [
+     0.0,
+     0.0
+    ],
+    "spread0": [
+     1.4509,
+     0.0
+    ],
+    "spread1": [
+     1.4509,
+     0.0
+    ],
+    "usage_vs_gain_change_r": [
+     null,
+     0
+    ]
+   }
+  },
+  "static-net": {
+   "coupler": {
+    "err_final": [
+     0.2053,
+     0.072
+    ],
+    "err_late": [
+     0.2046,
+     0.0719
+    ],
+    "coverage": [
+     9.3,
+     8.3672
+    ],
+    "entropy_bits": [
+     1.1667,
+     1.3805
+    ],
+    "homeo": [
+     0.2025,
+     0.3311
+    ],
+    "drift": [
+     0.0,
+     0.0
+    ],
+    "spread0": [
+     1.2197,
+     0.1916
+    ],
+    "spread1": [
+     1.2197,
+     0.1916
+    ],
+    "usage_vs_gain_change_r": [
+     null,
+     0
+    ]
+   },
+   "random": {
+    "err_final": [
+     0.0688,
+     0.0263
+    ],
+    "err_late": [
+     0.0721,
+     0.0231
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     4.988,
+     0.0021
+    ],
+    "homeo": [
+     0.2837,
+     0.1512
+    ],
+    "drift": [
+     0.0,
+     0.0
+    ],
+    "spread0": [
+     1.2197,
+     0.1916
+    ],
+    "spread1": [
+     1.2197,
+     0.1916
+    ],
+    "usage_vs_gain_change_r": [
+     null,
+     0
+    ]
+   },
+   "sweep": {
+    "err_final": [
+     0.1013,
+     0.0411
+    ],
+    "err_late": [
+     0.0922,
+     0.0299
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     5.0,
+     0.0
+    ],
+    "homeo": [
+     0.2715,
+     0.1409
+    ],
+    "drift": [
+     0.0,
+     0.0
+    ],
+    "spread0": [
+     1.2197,
+     0.1916
+    ],
+    "spread1": [
+     1.2197,
+     0.1916
+    ],
+    "usage_vs_gain_change_r": [
+     null,
+     0
+    ]
+   },
+   "curious": {
+    "err_final": [
+     0.0662,
+     0.0302
+    ],
+    "err_late": [
+     0.0657,
+     0.0246
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     4.7345,
+     0.1277
+    ],
+    "homeo": [
+     0.2619,
+     0.1276
+    ],
+    "drift": [
+     0.0,
+     0.0
+    ],
+    "spread0": [
+     1.2197,
+     0.1916
+    ],
+    "spread1": [
+     1.2197,
+     0.1916
+    ],
+    "usage_vs_gain_change_r": [
+     null,
+     0
+    ]
+   },
+   "dual": {
+    "err_final": [
+     0.077,
+     0.0446
+    ],
+    "err_late": [
+     0.068,
+     0.0262
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     4.6187,
+     0.1552
+    ],
+    "homeo": [
+     0.1316,
+     0.0308
+    ],
+    "drift": [
+     0.0,
+     0.0
+    ],
+    "spread0": [
+     1.2197,
+     0.1916
+    ],
+    "spread1": [
+     1.2197,
+     0.1916
+    ],
+    "usage_vs_gain_change_r": [
+     null,
+     0
+    ]
+   }
+  },
+  "habituating": {
+   "coupler": {
+    "err_final": [
+     0.2016,
+     0.0559
+    ],
+    "err_late": [
+     0.1981,
+     0.058
+    ],
+    "coverage": [
+     13.9,
+     8.2879
+    ],
+    "entropy_bits": [
+     2.0899,
+     1.5605
+    ],
+    "homeo": [
+     0.3186,
+     0.3484
+    ],
+    "drift": [
+     0.0,
+     0.0
+    ],
+    "spread0": [
+     1.2197,
+     0.1916
+    ],
+    "spread1": [
+     1.2197,
+     0.1916
+    ],
+    "usage_vs_gain_change_r": [
+     null,
+     0
+    ]
+   },
+   "random": {
+    "err_final": [
+     0.0535,
+     0.0161
+    ],
+    "err_late": [
+     0.0594,
+     0.0148
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     4.988,
+     0.0021
+    ],
+    "homeo": [
+     0.2697,
+     0.1085
+    ],
+    "drift": [
+     0.0,
+     0.0
+    ],
+    "spread0": [
+     1.2197,
+     0.1916
+    ],
+    "spread1": [
+     1.2197,
+     0.1916
+    ],
+    "usage_vs_gain_change_r": [
+     null,
+     0
+    ]
+   },
+   "sweep": {
+    "err_final": [
+     0.0851,
+     0.0349
+    ],
+    "err_late": [
+     0.0801,
+     0.0217
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     5.0,
+     0.0
+    ],
+    "homeo": [
+     0.2749,
+     0.1054
+    ],
+    "drift": [
+     0.0,
+     0.0
+    ],
+    "spread0": [
+     1.2197,
+     0.1916
+    ],
+    "spread1": [
+     1.2197,
+     0.1916
+    ],
+    "usage_vs_gain_change_r": [
+     null,
+     0
+    ]
+   },
+   "curious": {
+    "err_final": [
+     0.0527,
+     0.0213
+    ],
+    "err_late": [
+     0.0538,
+     0.016
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     4.7175,
+     0.0805
+    ],
+    "homeo": [
+     0.2305,
+     0.1006
+    ],
+    "drift": [
+     0.0,
+     0.0
+    ],
+    "spread0": [
+     1.2197,
+     0.1916
+    ],
+    "spread1": [
+     1.2197,
+     0.1916
+    ],
+    "usage_vs_gain_change_r": [
+     null,
+     0
+    ]
+   },
+   "dual": {
+    "err_final": [
+     0.0558,
+     0.0252
+    ],
+    "err_late": [
+     0.0542,
+     0.0162
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     4.6245,
+     0.0934
+    ],
+    "homeo": [
+     0.1286,
+     0.0314
+    ],
+    "drift": [
+     0.0,
+     0.0
+    ],
+    "spread0": [
+     1.2197,
+     0.1916
+    ],
+    "spread1": [
+     1.2197,
+     0.1916
+    ],
+    "usage_vs_gain_change_r": [
+     null,
+     0
+    ]
+   }
+  },
+  "plastic": {
+   "coupler": {
+    "err_final": [
+     0.1738,
+     0.0641
+    ],
+    "err_late": [
+     0.1902,
+     0.0712
+    ],
+    "coverage": [
+     19.9,
+     9.0714
+    ],
+    "entropy_bits": [
+     2.5574,
+     1.2166
+    ],
+    "homeo": [
+     0.3301,
+     0.345
+    ],
+    "drift": [
+     0.5584,
+     0.0936
+    ],
+    "spread0": [
+     1.2197,
+     0.1916
+    ],
+    "spread1": [
+     1.1759,
+     0.2128
+    ],
+    "usage_vs_gain_change_r": [
+     0.176,
+     10
+    ]
+   },
+   "random": {
+    "err_final": [
+     0.0487,
+     0.011
+    ],
+    "err_late": [
+     0.0507,
+     0.0115
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     4.988,
+     0.0021
+    ],
+    "homeo": [
+     0.3098,
+     0.151
+    ],
+    "drift": [
+     0.4576,
+     0.0465
+    ],
+    "spread0": [
+     1.2197,
+     0.1916
+    ],
+    "spread1": [
+     1.1527,
+     0.2536
+    ],
+    "usage_vs_gain_change_r": [
+     -0.099,
+     10
+    ]
+   },
+   "sweep": {
+    "err_final": [
+     0.0751,
+     0.0195
+    ],
+    "err_late": [
+     0.0728,
+     0.0181
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     5.0,
+     0.0
+    ],
+    "homeo": [
+     0.2943,
+     0.1378
+    ],
+    "drift": [
+     0.4616,
+     0.053
+    ],
+    "spread0": [
+     1.2197,
+     0.1916
+    ],
+    "spread1": [
+     1.1727,
+     0.2558
+    ],
+    "usage_vs_gain_change_r": [
+     -0.076,
+     10
+    ]
+   },
+   "curious": {
+    "err_final": [
+     0.0435,
+     0.011
+    ],
+    "err_late": [
+     0.0462,
+     0.007
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     4.839,
+     0.0356
+    ],
+    "homeo": [
+     0.3029,
+     0.1757
+    ],
+    "drift": [
+     0.4597,
+     0.0574
+    ],
+    "spread0": [
+     1.2197,
+     0.1916
+    ],
+    "spread1": [
+     1.0876,
+     0.2586
+    ],
+    "usage_vs_gain_change_r": [
+     0.297,
+     10
+    ]
+   },
+   "dual": {
+    "err_final": [
+     0.0468,
+     0.0116
+    ],
+    "err_late": [
+     0.0489,
+     0.0129
+    ],
+    "coverage": [
+     32.0,
+     0.0
+    ],
+    "entropy_bits": [
+     4.7642,
+     0.0897
+    ],
+    "homeo": [
+     0.1396,
+     0.0343
+    ],
+    "drift": [
+     0.463,
+     0.0603
+    ],
+    "spread0": [
+     1.2197,
+     0.1916
+    ],
+    "spread1": [
+     1.0964,
+     0.2758
+    ],
+    "usage_vs_gain_change_r": [
+     0.301,
+     10
+    ]
+   }
+  }
+ },
+ "runtime_s": 202.5
+}

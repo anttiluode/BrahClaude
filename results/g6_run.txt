@@ -1,0 +1,17 @@
+LIN P=10 B: acc q1 0.031 q6 0.031 q12 0.031 | memory left 0.682 (unqueried 0.684) | |S| 8.00 re-ping 1.00 | maxdev 7.6e-17
+LIN P=10 R: acc q1 0.096 q6 0.887 q12 0.996 | memory left 0.688 (unqueried 0.684) | |S| 4.00 re-ping 0.50
+LIN P=10 G: acc q1 0.105 q6 0.992 q12 1.000 | memory left 0.687 (unqueried 0.684) | |S| 3.82 re-ping 0.53
+LIN P=10 O: acc q1 0.980 q6 1.000 q12 1.000 | memory left 0.686 (unqueried 0.684) | |S| 8.00 re-ping 1.00
+LIN P=40 B: acc q1 0.036 q6 0.036 q12 0.036 | memory left 0.100 (unqueried 0.102) | |S| 8.00 re-ping 1.00 | maxdev 5.6e-17
+LIN P=40 R: acc q1 0.092 q6 0.781 q12 0.866 | memory left 0.099 (unqueried 0.102) | |S| 4.00 re-ping 0.50
+LIN P=40 G: acc q1 0.090 q6 0.934 q12 0.949 | memory left 0.103 (unqueried 0.102) | |S| 4.16 re-ping 0.52
+LIN P=40 O: acc q1 0.978 q6 1.000 q12 1.000 | memory left 0.098 (unqueried 0.102) | |S| 8.00 re-ping 1.00
+TM P=10 B: acc q1 0.039 q6 0.039 q12 0.039 | memory left 0.036 (unqueried 0.832) | |S| 8.00 re-ping 1.00 | maxdev 5.6e-17
+TM P=10 R: acc q1 0.096 q6 0.474 q12 0.544 | memory left 0.053 (unqueried 0.832) | |S| 4.00 re-ping 0.50
+TM P=10 G: acc q1 0.118 q6 0.532 q12 0.553 | memory left 0.043 (unqueried 0.832) | |S| 4.68 re-ping 0.58
+TM P=10 O: acc q1 0.971 q6 0.978 q12 0.978 | memory left 0.034 (unqueried 0.832) | |S| 8.00 re-ping 1.00
+TM P=40 B: acc q1 0.032 q6 0.032 q12 0.032 | memory left 0.037 (unqueried 0.177) | |S| 8.00 re-ping 1.00 | maxdev 7.6e-17
+TM P=40 R: acc q1 0.092 q6 0.581 q12 0.649 | memory left 0.053 (unqueried 0.177) | |S| 4.00 re-ping 0.50
+TM P=40 G: acc q1 0.100 q6 0.769 q12 0.808 | memory left 0.060 (unqueried 0.177) | |S| 3.96 re-ping 0.39
+TM P=40 O: acc q1 0.974 q6 0.991 q12 0.992 | memory left 0.039 (unqueried 0.177) | |S| 8.00 re-ping 1.00
+{'G6-0': True, 'G6-1': True, 'G6-2': True, 'G6-3': True} stepping err 0.0 0.0
