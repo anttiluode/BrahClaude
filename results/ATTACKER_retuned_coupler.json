@@ -1,0 +1,121 @@
+{
+ "grid": {
+  "setpoint": [
+   0.1,
+   0.25,
+   0.4,
+   0.55
+  ],
+  "target_variance": [
+   0.03,
+   0.1,
+   0.2,
+   0.4
+  ],
+  "sharpness": [
+   1.5,
+   3.0,
+   6.0
+  ]
+ },
+ "tune_seeds": [
+  100,
+  101,
+  102,
+  103,
+  104
+ ],
+ "held_out_seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19
+ ],
+ "result": {
+  "static-net": {
+   "best_kw": {
+    "setpoint": 0.25,
+    "target_variance": 0.1,
+    "sharpness": 6.0
+   },
+   "tune_homeo": 0.0521,
+   "default_coupler": {
+    "homeo": 0.1778,
+    "err_late": 0.2117,
+    "coverage": 8.55
+   },
+   "retuned_coupler": {
+    "homeo": 0.0614,
+    "err_late": 0.2212,
+    "coverage": 5.65
+   },
+   "dual": {
+    "homeo": 0.1219,
+    "err_late": 0.0741,
+    "coverage": 32.0
+   }
+  },
+  "habituating": {
+   "best_kw": {
+    "setpoint": 0.1,
+    "target_variance": 0.1,
+    "sharpness": 6.0
+   },
+   "tune_homeo": 0.0355,
+   "default_coupler": {
+    "homeo": 0.2227,
+    "err_late": 0.1726,
+    "coverage": 15.45
+   },
+   "retuned_coupler": {
+    "homeo": 0.0744,
+    "err_late": 0.1869,
+    "coverage": 11.75
+   },
+   "dual": {
+    "homeo": 0.1264,
+    "err_late": 0.048,
+    "coverage": 32.0
+   }
+  },
+  "plastic": {
+   "best_kw": {
+    "setpoint": 0.1,
+    "target_variance": 0.03,
+    "sharpness": 6.0
+   },
+   "tune_homeo": 0.0788,
+   "default_coupler": {
+    "homeo": 0.2294,
+    "err_late": 0.1676,
+    "coverage": 22.1
+   },
+   "retuned_coupler": {
+    "homeo": 0.1724,
+    "err_late": 0.1868,
+    "coverage": 20.1
+   },
+   "dual": {
+    "homeo": 0.1399,
+    "err_late": 0.0501,
+    "coverage": 32.0
+   }
+  }
+ }
+}

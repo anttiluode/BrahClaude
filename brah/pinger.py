@@ -78,10 +78,10 @@ def choose(policy, t, rng, table, hist, coupler, last_sum):
     raise ValueError(policy)
 
 
-def run(medium, policy, ticks=2000, seed=0, every=100):
+def run(medium, policy, ticks=2000, seed=0, every=100, coupler_kw=None):
     from .media import response_map
     rng = np.random.default_rng(seed)
-    table, coupler = Table(), Coupler()
+    table, coupler = Table(), Coupler(**(coupler_kw or {}))
     hist = deque(maxlen=WINDOW)
     map0 = response_map(medium, LEVELS, rested=True)
     W0 = medium.params().copy()

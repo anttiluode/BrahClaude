@@ -1,0 +1,20 @@
+checkerboard blind   pings first20 10.77 last100 11.00±0.22  success 1.00->1.00  drift 0.000  curve [11.28, 11.26, 10.85, 11.32, 10.88, 11.12]
+checkerboard ashby   pings first20 13.31 last100 13.87±0.17  success 0.86->0.86  drift 0.000  curve [13.7, 13.63, 13.46, 13.58, 14.1, 13.64]
+checkerboard memory  pings first20  3.04 last100  1.00±0.00  success 1.00->1.00  drift 0.000  curve [1.94, 1.01, 1.0, 1.0, 1.0, 1.0]
+checkerboard oracle  pings first20  1.00 last100  1.00±0.00  success 1.00->1.00  drift 0.000  curve [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+static-net   blind   pings first20 16.29 last100 15.88±0.98  success 0.67->0.71  drift 0.000  curve [16.06, 16.47, 16.48, 16.2, 16.0, 15.76]
+static-net   ashby   pings first20 16.61 last100 16.81±1.04  success 0.67->0.67  drift 0.000  curve [16.78, 16.84, 17.47, 16.46, 17.08, 16.55]
+static-net   memory  pings first20  9.50 last100  7.62±0.67  success 0.76->0.80  drift 0.000  curve [8.63, 8.26, 7.57, 7.33, 7.78, 7.45]
+static-net   oracle  pings first20  1.00 last100  1.00±0.00  success 1.00->1.00  drift 0.000  curve [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+habituating  blind   pings first20 16.15 last100 15.59±0.70  success 0.72->0.73  drift 0.000  curve [16.14, 16.31, 15.69, 15.59, 15.52, 15.66]
+habituating  ashby   pings first20 16.18 last100 16.61±0.72  success 0.69->0.69  drift 0.000  curve [16.04, 15.91, 16.2, 15.85, 16.76, 16.46]
+habituating  memory  pings first20  8.52 last100  6.25±0.46  success 0.80->0.84  drift 0.000  curve [7.28, 6.39, 6.6, 6.2, 6.34, 6.16]
+habituating  oracle  pings first20  1.00 last100  1.00±0.00  success 1.00->1.00  drift 0.000  curve [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+plastic      blind   pings first20 15.89 last100 12.74±0.51  success 0.71->0.81  drift 0.511  curve [15.2, 14.26, 14.0, 13.32, 12.63, 12.85]
+plastic      ashby   pings first20 16.20 last100 13.44±0.46  success 0.70->0.76  drift 0.512  curve [15.8, 14.89, 13.69, 14.73, 13.16, 13.71]
+plastic      memory  pings first20  9.03 last100  6.17±0.50  success 0.78->0.84  drift 0.452  curve [8.13, 6.99, 5.81, 5.71, 6.42, 5.93]
+plastic      oracle  pings first20  1.00 last100  1.00±0.00  success 1.00->1.00  drift 0.311  curve [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+
+real	6m10.255s
+user	6m3.530s
+sys	0m0.079s

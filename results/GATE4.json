@@ -1,0 +1,272 @@
+{
+ "tol": 0.15,
+ "episodes": 300,
+ "seeds": 20,
+ "K": 32,
+ "result": {
+  "checkerboard": {
+   "blind": {
+    "pings_first20": 10.77,
+    "pings_last100": 11.0,
+    "pings_last100_se": 0.22,
+    "success_first20": 1.0,
+    "success_last100": 1.0,
+    "drift": 0.0,
+    "curve_by_50": [
+     11.28,
+     11.26,
+     10.85,
+     11.32,
+     10.88,
+     11.12
+    ]
+   },
+   "ashby": {
+    "pings_first20": 13.31,
+    "pings_last100": 13.87,
+    "pings_last100_se": 0.17,
+    "success_first20": 0.863,
+    "success_last100": 0.859,
+    "drift": 0.0,
+    "curve_by_50": [
+     13.7,
+     13.63,
+     13.46,
+     13.58,
+     14.1,
+     13.64
+    ]
+   },
+   "memory": {
+    "pings_first20": 3.04,
+    "pings_last100": 1.0,
+    "pings_last100_se": 0.0,
+    "success_first20": 1.0,
+    "success_last100": 1.0,
+    "drift": 0.0,
+    "curve_by_50": [
+     1.94,
+     1.01,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "oracle": {
+    "pings_first20": 1.0,
+    "pings_last100": 1.0,
+    "pings_last100_se": 0.0,
+    "success_first20": 1.0,
+    "success_last100": 1.0,
+    "drift": 0.0,
+    "curve_by_50": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ]
+   }
+  },
+  "static-net": {
+   "blind": {
+    "pings_first20": 16.29,
+    "pings_last100": 15.88,
+    "pings_last100_se": 0.98,
+    "success_first20": 0.672,
+    "success_last100": 0.712,
+    "drift": 0.0,
+    "curve_by_50": [
+     16.06,
+     16.47,
+     16.48,
+     16.2,
+     16.0,
+     15.76
+    ]
+   },
+   "ashby": {
+    "pings_first20": 16.61,
+    "pings_last100": 16.81,
+    "pings_last100_se": 1.04,
+    "success_first20": 0.672,
+    "success_last100": 0.67,
+    "drift": 0.0,
+    "curve_by_50": [
+     16.78,
+     16.84,
+     17.47,
+     16.46,
+     17.08,
+     16.55
+    ]
+   },
+   "memory": {
+    "pings_first20": 9.5,
+    "pings_last100": 7.62,
+    "pings_last100_se": 0.67,
+    "success_first20": 0.76,
+    "success_last100": 0.801,
+    "drift": 0.0,
+    "curve_by_50": [
+     8.63,
+     8.26,
+     7.57,
+     7.33,
+     7.78,
+     7.45
+    ]
+   },
+   "oracle": {
+    "pings_first20": 1.0,
+    "pings_last100": 1.0,
+    "pings_last100_se": 0.0,
+    "success_first20": 1.0,
+    "success_last100": 1.0,
+    "drift": 0.0,
+    "curve_by_50": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ]
+   }
+  },
+  "habituating": {
+   "blind": {
+    "pings_first20": 16.15,
+    "pings_last100": 15.59,
+    "pings_last100_se": 0.7,
+    "success_first20": 0.72,
+    "success_last100": 0.729,
+    "drift": 0.0,
+    "curve_by_50": [
+     16.14,
+     16.31,
+     15.69,
+     15.59,
+     15.52,
+     15.66
+    ]
+   },
+   "ashby": {
+    "pings_first20": 16.18,
+    "pings_last100": 16.61,
+    "pings_last100_se": 0.72,
+    "success_first20": 0.685,
+    "success_last100": 0.688,
+    "drift": 0.0,
+    "curve_by_50": [
+     16.04,
+     15.91,
+     16.2,
+     15.85,
+     16.76,
+     16.46
+    ]
+   },
+   "memory": {
+    "pings_first20": 8.52,
+    "pings_last100": 6.25,
+    "pings_last100_se": 0.46,
+    "success_first20": 0.797,
+    "success_last100": 0.839,
+    "drift": 0.0,
+    "curve_by_50": [
+     7.28,
+     6.39,
+     6.6,
+     6.2,
+     6.34,
+     6.16
+    ]
+   },
+   "oracle": {
+    "pings_first20": 1.0,
+    "pings_last100": 1.0,
+    "pings_last100_se": 0.0,
+    "success_first20": 1.0,
+    "success_last100": 1.0,
+    "drift": 0.0,
+    "curve_by_50": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ]
+   }
+  },
+  "plastic": {
+   "blind": {
+    "pings_first20": 15.89,
+    "pings_last100": 12.74,
+    "pings_last100_se": 0.51,
+    "success_first20": 0.71,
+    "success_last100": 0.805,
+    "drift": 0.511,
+    "curve_by_50": [
+     15.2,
+     14.26,
+     14.0,
+     13.32,
+     12.63,
+     12.85
+    ]
+   },
+   "ashby": {
+    "pings_first20": 16.2,
+    "pings_last100": 13.44,
+    "pings_last100_se": 0.46,
+    "success_first20": 0.698,
+    "success_last100": 0.756,
+    "drift": 0.512,
+    "curve_by_50": [
+     15.8,
+     14.89,
+     13.69,
+     14.73,
+     13.16,
+     13.71
+    ]
+   },
+   "memory": {
+    "pings_first20": 9.03,
+    "pings_last100": 6.17,
+    "pings_last100_se": 0.5,
+    "success_first20": 0.775,
+    "success_last100": 0.842,
+    "drift": 0.452,
+    "curve_by_50": [
+     8.13,
+     6.99,
+     5.81,
+     5.71,
+     6.42,
+     5.93
+    ]
+   },
+   "oracle": {
+    "pings_first20": 1.0,
+    "pings_last100": 1.0,
+    "pings_last100_se": 0.0,
+    "success_first20": 1.0,
+    "success_last100": 1.0,
+    "drift": 0.311,
+    "curve_by_50": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ]
+   }
+  }
+ }
+}

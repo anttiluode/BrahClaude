@@ -1,0 +1,7 @@
+static-net {"best_kw": {"setpoint": 0.25, "target_variance": 0.1, "sharpness": 6.0}, "tune_homeo": 0.0521, "default_coupler": {"homeo": 0.1778, "err_late": 0.2117, "coverage": 8.55}, "retuned_coupler": {"homeo": 0.0614, "err_late": 0.2212, "coverage": 5.65}, "dual": {"homeo": 0.1219, "err_late": 0.0741, "coverage": 32.0}}
+habituating {"best_kw": {"setpoint": 0.1, "target_variance": 0.1, "sharpness": 6.0}, "tune_homeo": 0.0355, "default_coupler": {"homeo": 0.2227, "err_late": 0.1726, "coverage": 15.45}, "retuned_coupler": {"homeo": 0.0744, "err_late": 0.1869, "coverage": 11.75}, "dual": {"homeo": 0.1264, "err_late": 0.048, "coverage": 32.0}}
+plastic {"best_kw": {"setpoint": 0.1, "target_variance": 0.03, "sharpness": 6.0}, "tune_homeo": 0.0788, "default_coupler": {"homeo": 0.2294, "err_late": 0.1676, "coverage": 22.1}, "retuned_coupler": {"homeo": 0.1724, "err_late": 0.1868, "coverage": 20.1}, "dual": {"homeo": 0.1399, "err_late": 0.0501, "coverage": 32.0}}
+
+real	4m16.611s
+user	4m12.274s
+sys	0m0.154s

@@ -1,0 +1,86 @@
+{
+ "static-net/blind": {
+  "redundancy": [
+   3.459,
+   3.459
+  ],
+  "distinct": [
+   17.4,
+   17.4
+  ],
+  "spread": [
+   1.148,
+   1.148
+  ]
+ },
+ "static-net/memory": {
+  "redundancy": [
+   3.459,
+   3.459
+  ],
+  "distinct": [
+   17.4,
+   17.4
+  ],
+  "spread": [
+   1.148,
+   1.148
+  ]
+ },
+ "habituating/blind": {
+  "redundancy": [
+   3.459,
+   3.459
+  ],
+  "distinct": [
+   17.4,
+   17.4
+  ],
+  "spread": [
+   1.148,
+   1.148
+  ]
+ },
+ "habituating/memory": {
+  "redundancy": [
+   3.459,
+   3.459
+  ],
+  "distinct": [
+   17.4,
+   17.4
+  ],
+  "spread": [
+   1.148,
+   1.148
+  ]
+ },
+ "plastic/blind": {
+  "redundancy": [
+   3.459,
+   4.241
+  ],
+  "distinct": [
+   17.4,
+   16.55
+  ],
+  "spread": [
+   1.148,
+   1.129
+  ]
+ },
+ "plastic/memory": {
+  "redundancy": [
+   3.459,
+   4.284
+  ],
+  "distinct": [
+   17.4,
+   16.5
+  ],
+  "spread": [
+   1.148,
+   1.118
+  ]
+ }
+}
